@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <title>Consultor de CEP</title>
 </head>
 <body>
-    <label for="cep">CEP:</label>
-    <input type="text" id="CepID" name="cep" placeholder="Digite um cep">
-    <input type="button" value="Verificar CEP"  onclick="PromiseCEP()">
+
+    <div id="div-lista-cep" class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">CEP</span>
+        <input type="text" class="form-control" id="CepID" name="cep" placeholder="Digite um cep" aria-label="Username" aria-describedby="basic-addon1">
+        <button type="button" class="btn btn-outline-primary" onclick="PromiseCEP()">Verificar CEP</button>
+    </div>
 
     <div id="dados"></div>
 
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
