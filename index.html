@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Consultor de CEP</title>
 </head>
 <body>
 
     <div id="div-lista-cep">
-        <div id="div-info-cep" class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">CEP</span>
-            <input type="text" class="form-control" id="CepID" name="cep" placeholder="Digite um CEP" aria-label="Username" aria-describedby="basic-addon1">
-            <button type="button" class="btn btn-outline-light" onclick="PromiseCEP()">Consultar CEP</button>
+        <div id="div-info-cep">
+            <span>Digite um CEP <input class="input is-primary" type="text" id="CepID" name="cep" maxlength="8"></span>
+            <br/>
+            <button class="consultaBTN btn waves-effect waves-light" type="submit" name="action" onclick="PromiseCEP()">Consultar CEP<i class="material-icons right"></i>
+            </button>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="content" class="card-body">
+                        <h5 id="cepTitle" class='card-title'>Número CEP: </h5>
+                        <p id="cepLogradouro" class='card-text'>Logradouro: </p>
+                        <p id="cepBairro" class='card-text'>Bairro: </p>
+                        <p id="cepCidade" class='card-text'>Cidade: </p>
+                        <p id="cepUf" class='card-text'>UF: </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div id="dados"></div>
+        <!-- <div id="dados"></div> -->
     </div>
 
     <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

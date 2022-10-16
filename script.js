@@ -9,15 +9,11 @@ async function PromiseCEP(){
     let div = document.getElementById("dados")
 // div.innerHTML = `<p>Número CEP: ${numCEP}</p> <p>Logradouro: ${cepConvertido.logradouro}</p> <p>Bairro: ${cepConvertido.bairro}</p> <p>Cidade: ${cepConvertido.localidade}</p> <p>UF: ${cepConvertido.uf}</p>`
     if(cepConvertido.logradouro != undefined && cepConvertido.bairro != undefined){
-           div.innerHTML = `<div class='card' style='width: 18rem;'>
-                                <div class='card-body'>
-                                    <h5 class='card-title'>Número CEP:${numCEP}</h5>
-                                    <p class='card-text'>Logradouro: ${cepConvertido.logradouro}</p>
-                                    <p class='card-text'>Bairro: ${cepConvertido.bairro}</p>
-                                    <p class='card-text'>Cidade: ${cepConvertido.localidade}</p>
-                                    <p class='card-text'>UF: ${cepConvertido.uf}</p>
-                                </div>
-                            </div>`
+        cepTitle.textContent = `Número CEP: ${numCEP}`
+        cepLogradouro.textContent = `Logradouro: ${cepConvertido.logradouro}`
+        cepBairro.textContent = `Bairro: ${cepConvertido.bairro}`
+        cepCidade.textContent = `Cidade: ${cepConvertido.localidade}`
+        cepUf.textContent = `UF: ${cepConvertido.uf}`
     }else{
         swal({
             title: "Esse CEP não Existe",
